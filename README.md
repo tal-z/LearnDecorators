@@ -2,6 +2,7 @@
 
 ###About
 This project is a space for me to learn about python decorators. 
+
 My goal is to write a decorator that adds my signature to a function's docstring.
 In the process, I want to fully understand how decorators work. 
 I also want to start exploring docstrings, and get a better understanding before trying out sphinx again.
