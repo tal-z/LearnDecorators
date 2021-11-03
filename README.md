@@ -7,7 +7,7 @@ In the process, I want to fully understand how decorators work.
 I also want to start exploring docstrings, and get a better understanding before trying out sphinx again.
 
 ###Findings:
-  - docstrings are easliy accessible at the __doc__ dundermethod
+  - Docstrings are easliy accessible at the __doc__ dundermethod
   - Docstrings for Python types are immutable (read-only). Makes sense. 
   - To make decorators work on functions with args and kwargs, 
     you have to pass *args and **kwargs
