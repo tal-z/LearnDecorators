@@ -21,8 +21,7 @@ I also want to start exploring docstrings, and get a better understanding before
       Unless you also define the docstring on that sub-function, 
     - you don't get `__doc__` property from the sub-function.
     - You can fix this by explicitly setting the `wrapper.__doc__`
-  - Also noting that it does not seem possible to use 
-    multiple decorators on a function, with or without syntactic sugar.
+
 
 
 ### End Results: 
@@ -37,5 +36,15 @@ I found this on RealPython, and used it as a model.
 I kept it in there, because it offers a simple way 
 to demonstrate the two ways of applying decorators in Python, 
 and their mutual exclusivity.
+
+
+### Resources:
+  - https://www.python.org/dev/peps/pep-0257/
+
+
+### Extra Credit:
+Can I write a function (or even a decorator?) 
+to sign modules as well as functions?
+
 
 
