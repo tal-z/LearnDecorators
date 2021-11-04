@@ -1,13 +1,13 @@
 # Learn About Decorators in Python!
 
-###About
+### About
 This project is a space for me to learn about python decorators. 
 
 My goal is to write a decorator that adds my signature to a function's docstring.
 In the process, I want to fully understand how decorators work. 
 I also want to start exploring docstrings, and get a better understanding before trying out sphinx again.
 
-###Findings:
+### Findings:
   - Docstrings are easliy accessible at the `__doc__` dundermethod
   - Docstrings for Python types are immutable (read-only). Makes sense. 
   - To make decorators work on functions with args and kwargs, 
@@ -25,7 +25,7 @@ I also want to start exploring docstrings, and get a better understanding before
     multiple decorators on a function, with or without syntactic sugar.
 
 
-###End Results: 
+### End Results: 
 Success! In main.py, I have a `sign_docstring()` function 
 which, when referenced with a decorator, 
 adds my name to the end of a docstring.
