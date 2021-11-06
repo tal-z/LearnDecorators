@@ -39,8 +39,19 @@ def custom_or(vals: tuple):
 def custom_nand(vals: tuple):
     return bool(not (vals[0] and vals[1]))
 
+@truth_table
+def custom_nand_2(vals: tuple):
+    if vals[0] == 1 and vals[1] == 1:
+        return False
+    else:
+        return True
 
-custom_not([0])
-custom_and([0, 1])
-custom_or([0, 1])
-custom_nand([0, 1])
+@truth_table
+def custom_xor(vals: tuple):
+    a, b = vals
+    if (a and not b) or (b and not a):
+        return True
+    return False
+
+custom_xor([0,1])
+
