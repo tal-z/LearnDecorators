@@ -31,16 +31,16 @@ def custom_and(vals: tuple):
 
 
 @truth_table
-def custom_bool_3(vals: tuple):
+def custom_or(vals: tuple):
     return bool(vals[0] and not vals[1])
 
 
 @truth_table
-def custom_bool_4(vals: tuple):
+def custom_nand(vals: tuple):
     return bool(not (vals[0] and vals[1]))
 
 
-#custom_not([0])
+custom_not([0])
 custom_and([0, 1])
-custom_bool_3([0, 1])
-#custom_bool_4([0, 1])
+custom_or([0, 1])
+custom_nand([0, 1])
