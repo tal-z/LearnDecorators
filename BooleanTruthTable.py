@@ -16,21 +16,31 @@ def truth_table(func):
         print(df.to_string(index=False))
         print()
         return func(*args)
+
     return wrapper
+
 
 @truth_table
 def custom_bool_1(vals: tuple):
     return not vals[0]
 
+
 @truth_table
 def custom_bool_2(vals: tuple):
     return vals[0] and vals[1]
+
 
 @truth_table
 def custom_bool_3(vals: tuple):
     return vals[0] or vals[1]
 
 
+@truth_table
+def custom_bool_4(vals: tuple):
+    return not (vals[0] and vals[1])
+
+
 custom_bool_1([0])
 custom_bool_2([0, 1])
 custom_bool_3([0, 1])
+custom_bool_4([0, 1])
