@@ -21,26 +21,26 @@ def truth_table(func):
 
 
 @truth_table
-def custom_bool_1(vals: tuple):
-    return not vals[0]
+def custom_not(vals: tuple):
+    return bool(not vals[0])
 
 
 @truth_table
-def custom_bool_2(vals: tuple):
-    return vals[0] and vals[1]
+def custom_and(vals: tuple):
+    return bool(vals[0] and vals[1])
 
 
 @truth_table
 def custom_bool_3(vals: tuple):
-    return vals[0] or vals[1]
+    return bool(vals[0] and not vals[1])
 
 
 @truth_table
 def custom_bool_4(vals: tuple):
-    return not (vals[0] and vals[1])
+    return bool(not (vals[0] and vals[1]))
 
 
-custom_bool_1([0])
-custom_bool_2([0, 1])
+#custom_not([0])
+custom_and([0, 1])
 custom_bool_3([0, 1])
-custom_bool_4([0, 1])
+#custom_bool_4([0, 1])
