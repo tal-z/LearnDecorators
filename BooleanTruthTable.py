@@ -11,17 +11,26 @@ def truth_table(func):
         rows = list(itertools.product([0, 1], repeat=num_variables))
         df = pd.DataFrame(data=rows, columns=cols)
         df['f'] = [func(row) for idx, row in df.iterrows()]
-        print(df)
+        print()
+        print(f"Truth Table for {func.__name__}")
+        print(df.to_string(index=False))
+        print()
         return func(*args)
     return wrapper
 
 @truth_table
-def custom_bool(vals: list):
-    """Custom boolean function"""
-    if len([item for item in vals if item == 1]) > len([item for item in vals if item == 0]):
-        return True
-    else:
-        return False
+def custom_bool_1(vals: tuple):
+    return not vals[0]
 
-print(custom_bool([0,1,0,1,0]))
+@truth_table
+def custom_bool_2(vals: tuple):
+    return vals[0] and vals[1]
 
+@truth_table
+def custom_bool_3(vals: tuple):
+    return vals[0] or vals[1]
+
+
+custom_bool_1([0])
+custom_bool_2([0, 1])
+custom_bool_3([0, 1])
