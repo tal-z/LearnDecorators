@@ -22,22 +22,26 @@ def truth_table(func):
 
 @truth_table
 def custom_not(values: tuple[bool]):
-    return bool(not values[0])
+    a = values[0]
+    return bool(not a)
 
 
 @truth_table
 def custom_and(values: tuple[bool, bool]):
-    return bool(values[0] and values[1])
+    a, b = values
+    return bool(a and b)
 
 
 @truth_table
 def custom_or(values: tuple[bool, bool]):
-    return bool(values[0] and not values[1])
+    a, b = values
+    return bool(not (not a and not b))
 
 
 @truth_table
 def custom_nand(values: tuple[bool, bool]):
-    return bool(not (values[0] and values[1]))
+    a, b = values
+    return bool(not (a and b))
 
 @truth_table
 def custom_xor(values: tuple[bool, bool]):
@@ -45,4 +49,4 @@ def custom_xor(values: tuple[bool, bool]):
     return bool((a and not b) or (b and not a))
 
 
-custom_xor([0, 1])
+custom_xor([0])
